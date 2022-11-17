@@ -68,3 +68,8 @@ Constraint violation rate for the case study 2. Relation between the ball radius
 <p align="center">
   <img src="https://github.com/zhengang-zhong/DRMPC_nonlinear_system_via_linearization/blob/main/figs/constraint_vio2.png" width="50%">
 </P>
+
+
+
+### Simulation 5: Offset-free tracking
+
