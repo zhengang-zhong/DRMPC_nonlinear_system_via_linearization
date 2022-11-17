@@ -3,18 +3,7 @@
 
 ## Abstract
 
-Model predictive control (MPC) is an effective approach to control multivariable
-dynamic systems with constraints. Most real systems are however affected by plantmodel mismatch and process uncertainties, which can lead to closed-loop performance
-deterioration and constraint violations. Methods such as stochastic MPC (SMPC) have
-been proposed to alleviate these problems; however, the resulting closed-loop state
-trajectory might still significantly violate the prescribed constraints if the real system
-deviates from the assumed disturbance distributions made for the controller design. In
-this work we propose a novel data-driven distributionally robust MPC scheme for
-nonlinear systems. Unlike SMPC, which requires the exact knowledge of the
-disturbance distribution, our scheme decides the control action regarding the worst
-distribution from a distribution ambiguity set. This ambiguity set is defined as a
-Wasserstein ball centered at the empirical distribution. The favorable results of this
-control scheme are verified with nonlinear mass-spring and CSTR case studies.
+Model predictive control (MPC) is an effective approach to control multivariable dynamic systems with constraints. Most real dynamic models are however affected by plant-model mismatch and process uncertainties, which can lead to closed-loop performance deterioration and constraint violations. Methods such as stochastic MPC (SMPC) have been proposed to alleviate these problems; however, the resulting closed-loop state trajectory might still significantly violate the prescribed constraints if the real system deviates from the assumed disturbance distributions made during the controller design. In this work we propose a novel data-driven distributionally robust MPC scheme for nonlinear systems. Unlike SMPC, which requires the exact knowledge of the disturbance distribution, our scheme decides the control action with respect to the worst distribution from a distribution ambiguity set. This ambiguity set is defined as a Wasserstein ball centered at the empirical distribution. Due to the potential model errors that cause off-sets, the scheme is also extended by leveraging an offset-free method. The favorable results of this control scheme are demonstrated and empirically verified with a nonlinear mass spring system and a nonlinear CSTR case study.
 
 ## How to Run Experiments
 
