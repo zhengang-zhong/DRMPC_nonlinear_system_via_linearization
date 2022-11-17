@@ -131,14 +131,7 @@ class Stack_model(Linear_model):
         Nd = np.shape(D)[1]  # Dimension of disturbance
         Nr = np.shape(xr)[0]  # Dimension of output
 
-        # if nonlinear == True:
-        #     self.A = self.A_fn(x_init, u_0).full()
-        #     self.B = self.B_fn(x_init, u_0).full()
-        #     self.delta = self.delta_fn(x_init, u_0).full()
         if nonlinear == True:
-            # self.A = self.A_fn(xr, ur).full()
-            # self.B = self.B_fn(xr, ur).full()
-            # self.delta = self.delta_fn(xr, ur).full()
             self.A = self.A_fn(x_init, u_0).full()
             self.B = self.B_fn(x_init, u_0).full()
             self.delta = self.delta_fn(x_init, u_0).full()
@@ -168,15 +161,6 @@ class Stack_model(Linear_model):
         self.Nu_s = Nu_s
         self.Ny_s = Ny_s
         self.Nw_s = Nw_s
-
-        # Ax = np.zeros([Nx_s, Nx])
-        # Bx = np.zeros([Nx_s, Nu_s])
-        # Cx = np.zeros([Nx_s, Nw_s])
-        # Ay = np.zeros([Ny_s, Nx])
-        # By = np.zeros([Ny_s, Nu_s])
-        # Cy = np.zeros([Ny_s, Nw_s])
-        # Ey = np.zeros([Ny_s, Nw_s])
-
         self.stack_system()
 
     def stack_system(self):
@@ -696,15 +680,6 @@ class Simulation():
         xk_hat = x0_hat
         dk_hat = d0_hat
         for i in range(N_sim):
-            #     if i % N == 0:
-            # self.model.change_xinit(xk - np.array([[1],[0]]))
-            #             self.model.change_xinit(xk)
-            #             print(self.model.Ak)
-            #             print(xr,ur)
-
-            # if i>= 75:
-            #     i_state_ub = ca.inf # for nonlinear inverted pendulum
-
             opt_problem = Opt_problem(sys_fn, delta_t, N, xk_hat, D, F, f, G, g, F_t, f_t, H, h, Q, Qf, R, K, Lx, Ld, dk_hat, r,
                                       cont_time=cont_time, nonlinear=nonlinear, u_0=uk, xr=xr, ur=ur, collect=collect, est=est,
                                       sin_const=sin_const, N_sample=N_sample, epsilon=epsilon, W_sample_matrix = W_sample_matrix)
@@ -712,9 +687,7 @@ class Simulation():
             B = opt_problem.B
             delta = opt_problem.delta
 
-            # self.Nx = opt_problem.Nx
             Nr = opt_problem.Nr
-            # Nd = opt_problem.Nd
             Nu = opt_problem.Nu
             prob = opt_problem.prob
             prob.solve(solver=cp.GUROBI)
