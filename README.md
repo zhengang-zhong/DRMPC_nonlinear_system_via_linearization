@@ -73,3 +73,20 @@ Constraint violation rate for the case study 2. Relation between the ball radius
 
 ### Simulation 5: Offset-free tracking
 
+Simulation results for offset-free DRMPC using successive linearization in the nominal scenario averaged from 500 realizations with one sample and ball radius ranging from 0.001 to 5 on the CSTR system. Solid lines are the expected trajectories and shaded areas represent 15 − 75% percentile of trajectories.
+
+<p align="center">
+  <img src="https://github.com/zhengang-zhong/DRMPC_nonlinear_system_via_linearization/blob/main/figs/CSTR_SucL_PolyC1_Offset_free.png" width="50%">
+</P>
+
+Simulation results for offset-free DRMPC using successive linearization under modified distribution averaged from 500 realizations with one sample and ball radius ranges from 0.001 to 5 on the CSTR system. Solid lines are the expected trajectories and shaded areas represent 15 − 75% percentile of trajectories.
+
+<p align="center">
+  <img src="https://github.com/zhengang-zhong/DRMPC_nonlinear_system_via_linearization/blob/main/figs/CSTR_SucL_PolyC_shifted_learning_offset_free.png" width="50%">
+</P>
+
+Constraint violation rate for the case study 3. Relation between the ball radius and constraint violations, averaged from 500 realizations of trajectories.
+
+<p align="center">
+  <img src="https://github.com/zhengang-zhong/DRMPC_nonlinear_system_via_linearization/blob/main/figs/constraint_vio1_offset_free.png" width="50%">
+</P>
