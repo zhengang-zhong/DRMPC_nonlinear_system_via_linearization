@@ -1,5 +1,6 @@
 # Distributionally Robust Model Predictive Control for Nonlinear Process Systems
 
+This repository includes the code for the paper "[Tube-based Distributionally Robust Model Predictive Control for Nonlinear Process Systems via Linearization](https://arxiv.org/abs/2211.14595)".
 
 ## Abstract
 
